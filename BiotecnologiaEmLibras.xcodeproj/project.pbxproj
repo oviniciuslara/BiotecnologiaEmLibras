@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		ADC499062481715000F9E58A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC499052481715000F9E58A /* AppDelegate.swift */; };
 		ADC499082481715000F9E58A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC499072481715000F9E58A /* SceneDelegate.swift */; };
-		ADC4990A2481715000F9E58A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC499092481715000F9E58A /* ContentView.swift */; };
 		ADC4990C2481715200F9E58A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC4990B2481715200F9E58A /* Assets.xcassets */; };
 		ADC4990F2481715200F9E58A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC4990E2481715200F9E58A /* Preview Assets.xcassets */; };
 		ADC499122481715200F9E58A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC499102481715200F9E58A /* LaunchScreen.storyboard */; };
@@ -19,6 +18,7 @@
 		CE34F19E25505BAF0086A241 /* video_locus.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CE34F19A25505BAE0086A241 /* video_locus.mp4 */; };
 		CE34F19F25505BAF0086A241 /* video_genotipo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CE34F19B25505BAE0086A241 /* video_genotipo.mp4 */; };
 		CE34F1A025505BAF0086A241 /* video_cromossomo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CE34F19C25505BAF0086A241 /* video_cromossomo.mp4 */; };
+		CE5BA9D125877A7F00C7E080 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BA9D025877A7F00C7E080 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 		ADC499022481715000F9E58A /* BiotecnologiaEmLibras.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiotecnologiaEmLibras.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC499052481715000F9E58A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADC499072481715000F9E58A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADC499092481715000F9E58A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ADC4990B2481715200F9E58A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADC4990E2481715200F9E58A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ADC499112481715200F9E58A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		CE34F19A25505BAE0086A241 /* video_locus.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_locus.mp4; sourceTree = "<group>"; };
 		CE34F19B25505BAE0086A241 /* video_genotipo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_genotipo.mp4; sourceTree = "<group>"; };
 		CE34F19C25505BAF0086A241 /* video_cromossomo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_cromossomo.mp4; sourceTree = "<group>"; };
+		CE5BA9D025877A7F00C7E080 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 			children = (
 				ADC499052481715000F9E58A /* AppDelegate.swift */,
 				ADC499072481715000F9E58A /* SceneDelegate.swift */,
-				ADC499092481715000F9E58A /* ContentView.swift */,
+				CE5BA9D025877A7F00C7E080 /* ContentView.swift */,
 				ADC4990B2481715200F9E58A /* Assets.xcassets */,
 				ADC499102481715200F9E58A /* LaunchScreen.storyboard */,
 				ADC499132481715200F9E58A /* Info.plist */,
@@ -211,7 +211,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = Balaji;
 				TargetAttributes = {
 					ADC499012481715000F9E58A = {
@@ -285,7 +285,7 @@
 			files = (
 				ADC499062481715000F9E58A /* AppDelegate.swift in Sources */,
 				ADC499082481715000F9E58A /* SceneDelegate.swift in Sources */,
-				ADC4990A2481715000F9E58A /* ContentView.swift in Sources */,
+				CE5BA9D125877A7F00C7E080 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

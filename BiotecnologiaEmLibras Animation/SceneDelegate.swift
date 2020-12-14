@@ -9,19 +9,52 @@
 import UIKit
 import SwiftUI
 
+struct Card : Decodable, Hashable, Identifiable {
+    var id = UUID()
+    var image : String
+    var video : String
+    var title : String
+    var details : String
+    var expand : Bool
+}
+
+struct dataOrdered: Identifiable {
+    let id = UUID()
+    var startLetter : String
+    var cards : [Card] = []
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let dataUnsorted = [
+            Card(image: "imagem_cromossomo", video: "video_cromossomo", title: "Cromossomo", details: "Colécula de DNA em seu máximo estágio de compactação.", expand: false),
+            Card(image: "imagem_locus", video: "video_locus", title: "Locus", details: "Posição que um gene ocupa em um cromossomo.", expand: false),
+            Card(image: "imagem_genotipo", video: "video_genotipo", title: "Genótipo", details: "Constituição genética de um organismo, ou seja, o conjunto de genes que um indivíduo possui.", expand: false),
+            Card(image: "imagem_fenotipo", video: "video_fenotipo", title: "Fenótipo", details: "Expressão do genótipo mais a interação do ambiente.", expand: false),
+        ]
+        
+        let dataSorted = dataUnsorted.sorted { $0.title < $1.title }
 
+        var dataCategorized: [dataOrdered] = []
+
+        for data in dataSorted {
+            if let i = dataCategorized.firstIndex(where: { $0.startLetter == data.title.prefix(1) }) {
+                dataCategorized[i].cards.append(data)
+            } else {
+                dataCategorized.append(dataOrdered(startLetter: String(data.title.prefix(1)), cards: [data]))
+            }
+        }
+
+        // Create the SwiftUI view that provides the window contents.
+        let contentView = ContentView(cards: dataCategorized)
+        
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
